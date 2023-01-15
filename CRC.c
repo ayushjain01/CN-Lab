@@ -4,16 +4,6 @@
 int sDataLen, rDataLen, keyLen, flag = 0;
 char sData[50], rData[50], key[50], copy[50], rem[50];
 
-void complement(char data[50])
-{
-    for (int i = 0; i < strlen(data); i++)
-    {
-        if (data[i] == '0')
-            data[i] = '1';
-        else
-            data[i] = '0';
-    }
-}
 
 void crc()
 {

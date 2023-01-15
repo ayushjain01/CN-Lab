@@ -10,17 +10,14 @@ int min(int a, int b)
 void dijkstras(int vertices, int graph[6][6], int source, int visited[6], int distance[6], int prev[6])
 {
     int minDistance = INF, minIndex, count = 0;
-    // Step 1 -
+    // Step 2 - Initialize visited array to 0, add source as prev node for every node, store distance from source to node in distance array and mark source as visited
+
     for (int i = 0; i < vertices; i++)
-
-        // Step 2 - Initialize visited array to 0, add source as prev node for every node, store distance from source to node in distance array and mark source as visited
-
-        for (int i = 0; i < vertices; i++)
-        {
-            visited[i] = 0;
-            distance[i] = graph[source][i];
-            prev[i] = source;
-        }
+    {
+        visited[i] = 0;
+        distance[i] = graph[source][i];
+        prev[i] = source;
+    }
     visited[source] = 1;
 
     // Step 3 - Repeat Vertices - 1 times

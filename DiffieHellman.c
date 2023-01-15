@@ -20,7 +20,7 @@ void main()
     printf("\nAlice send R1 : %d to Bob", R1);
     y = rand()%10;
     printf("\nBob's Private Key y : %d", y);
-    R2 = compute(g, x, p);
+    R2 = compute(g, y, p);
     printf("\nBob send R2 : %d to Alice", R2);
     aliceKey = compute(R2, x, p);
     bobKey = compute(R1, y, p);
